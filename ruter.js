@@ -59,7 +59,6 @@ function prihvatiRute(zahtev, odgovor){
             ceo: podaci.body
         };
         render.prikazi("sentence", vrednosti, odgovor);
-    }   // prikaziProfil
 
 }   // prihvatiRute
 
