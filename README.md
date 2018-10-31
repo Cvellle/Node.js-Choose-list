@@ -1,1 +1,5 @@
-# Node.js-Choose-list
+Ddownload
+
+npm i
+
+node app.js
