@@ -1,4 +1,4 @@
-var Profile = require("./profile.js");
+var Sentence = require("./sentence.js");
 var render = require("./render.js");
 var querystring = require('querystring');
 
@@ -26,7 +26,7 @@ function prihvatiRute(zahtev, odgovor){
 
     if(zahtev.method.toLocaleLowerCase() == "get" && zahtev.url.length > 1) {
         var number = zahtev.url.replace("/", "");
-        var ovajProfil = new Profile(number);
+        var ovajProfil = new Sentence(number);
 
         ovajProfil.on("end", function(podaci) {
             prikaziProfil(odgovor, podaci);
@@ -58,7 +58,7 @@ function prihvatiRute(zahtev, odgovor){
             naslov: podaci.title,
             ceo: podaci.body
         };
-        render.prikazi("profile", vrednosti, odgovor);
+        render.prikazi("sentence", vrednosti, odgovor);
     }   // prikaziProfil
 
 }   // prihvatiRute
